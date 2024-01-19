@@ -11,7 +11,7 @@ import sys
 import datetime
 import random
 try:
-    import heatshrink
+    import heatshrink2 as heatshrink
     heatshrink_exists = True
 except ImportError:
     heatshrink_exists = False
@@ -405,7 +405,7 @@ class FileTransferProtocol(object):
 
         block_size = self.protocol.block_size
         if compression_support:
-            data = heatshrink.encode(data, window_sz2=self.compression['window'], lookahead_sz2=self.compression['lookahead'])
+            data = heatshrink.compress(data, window_sz2=self.compression['window'], lookahead_sz2=self.compression['lookahead'])
 
         cratio = filesize / len(data)
 
