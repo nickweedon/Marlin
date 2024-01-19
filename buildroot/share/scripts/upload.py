@@ -3,6 +3,7 @@ import sys
 import os
 import time
 import random
+import traceback
 import serial
 
 Import("env")
@@ -334,7 +335,9 @@ def Upload(source, target, env):
         raise
 
     except Exception as ex:
+
         print(f"\nException: {ex}, transfer aborted")
+        print(f"Exception traceback: {traceback.format_exception(ex)}")
         if protocol:
             protocol.disconnect()
             protocol.shutdown()
