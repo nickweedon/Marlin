@@ -1513,7 +1513,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -44, -14, -2.52 } // Use -2.22 for PETG, -2.20 for PLA
+#define NOZZLE_TO_PROBE_OFFSET { -44, -14, -2.34 } // Use -2.22 for PETG, -2.20 for PLA
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
